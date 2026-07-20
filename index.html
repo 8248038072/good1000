@@ -383,9 +383,9 @@ $('repExport').addEventListener('click', ()=> downloadCSV(lastReportRows, `${$('
    ========================================================================= */
 $('setSave').addEventListener('click', async ()=>{
   const data = {
-    CompanyName: $('setCompanyName').value, Department: $('setDepartment').value, AppTitle: $('setAppTitle').value,
-    ThemeColor: $('setThemeColor').value, FinancialYear: $('setFinancialYear').value, LogoUrl: $('setLogoUrl').value,
-    CompanyAddress: $('setAddress').value, FooterText: $('setFooter').value
+    CompanyName: $('SRII NARASUS COFFEE COMPANY').value, Department: $('STORES DEPARTMENT').value, AppTitle: $('APPRISIAL').value,
+    ThemeColor: $('LIGHTBLUE').value, FinancialYear: $('2026*2027r').value, LogoUrl: $('').value,
+    CompanyAddress: $('16COURT ROAD,SALEM').value, FooterText: $('GOOD LUCK').value
   };
   const res = await call(apiPost, 'saveConfig', { data });
   if(res && res.success){ toast('Settings saved', 'success'); loadMasters(); }
@@ -393,7 +393,7 @@ $('setSave').addEventListener('click', async ()=>{
 $('setApiSave').addEventListener('click', ()=>{
   const url = $('setApiUrl').value.trim();
   if(!url){ toast('Paste a valid Apps Script URL', 'error'); return; }
-  localStorage.setItem('apiUrl', url);
+  localStorage.setItem('apiUrl', https://script.google.com/macros/s/AKfycbyTHh7oO5kzrZvAdrqaodydcIVTfhDG-ZPpupRbdnhKMlq2flrbtdNmiZycIn1_BS8/exec);
   CONFIG.APPS_SCRIPT_URL = url;
   toast('Connection saved — reloading data', 'success');
   bootApp();
