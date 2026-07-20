@@ -383,9 +383,9 @@ $('repExport').addEventListener('click', ()=> downloadCSV(lastReportRows, `${$('
    ========================================================================= */
 $('setSave').addEventListener('click', async ()=>{
   const data = {
-    CompanyName: $('SRII NARASUS COFFEE COMPANY').value, Department: $('STORES DEPARTMENT').value, AppTitle: $('APPRISIAL').value,
-    ThemeColor: $('LIGHTBLUE').value, FinancialYear: $('2026*2027r').value, LogoUrl: $('SNC').value,
-    CompanyAddress: $('16COURT ROAD,SALEM').value, FooterText: $('GOOD LUCK').value
+    CompanyName: $('SRI NARASUS COFFEE COMPANY').value, Department: $('STORES DEPARTMENT').value, AppTitle: $('APPRISIAL').value,
+    ThemeColor: $('LIGHTBLUE').value, FinancialYear: $('2026-2027').value, LogoUrl: $('SNC').value,
+    CompanyAddress: $('COURT ROAD-SALEM').value, FooterText: $('GOOD LUCK').value
   };
   const res = await call(apiPost, 'saveConfig', { data });
   if(res && res.success){ toast('Settings saved', 'success'); loadMasters(); }
