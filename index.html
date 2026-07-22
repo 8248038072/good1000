@@ -697,7 +697,10 @@ document.addEventListener('click', (e)=>{
 async function renderDashboard(){
   const res = await call(apiGet, 'getDashboard');
   if(!res || !res.success) return;
-  const d = res.data;
+  const d = res.data || {};
+
+d.activityWise = d.activityWise || {};
+d.staffWise = d.staffWise || {};
   $('statTotalStaff').textContent = d.totalStaff;
   $('statTodayActivities').textContent = d.todaysActivities;
   $('statPending').textContent = d.pendingWork;
